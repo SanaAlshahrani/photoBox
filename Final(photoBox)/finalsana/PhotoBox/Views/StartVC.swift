@@ -21,7 +21,7 @@ class StartVC: UIViewController {
     }()
     let subTitleLabel: UILabel = {
         let title = UILabel()
-        title.text = "Sana Alshahrani"
+        title.text = "Sana Alshahrani".localized
         title.textColor = .label
         title.font = UIFont.systemFont(ofSize: 20, weight: .light)
         title.textAlignment = .center
@@ -40,7 +40,7 @@ class StartVC: UIViewController {
     let titleLabel: UILabel = {
         let title = UILabel()
         title.backgroundColor = .clear
-        title.text = "Welcome to PhotoBox App"
+        title.text = "Welcome to PhotoBox App".localized
         title.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
         title.textColor = UIColor.init(named: "witeColor")!
         title.textAlignment = .center
@@ -49,12 +49,12 @@ class StartVC: UIViewController {
     }()
     let signInButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setupButton(with:"Sign up")
+        button.setupButton(with:"Sign up".localized)
         return button
     }()
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setupButton(with: "Log in")
+        button.setupButton(with: "Log in".localized)
         return button
     }()
     override func viewDidLoad() {

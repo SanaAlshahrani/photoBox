@@ -21,7 +21,7 @@ class SignupVC: UIViewController {
     let titlelabel: UILabel = {
         let title = UILabel()
         title.backgroundColor = .clear
-        title.text = "Creating an account to use PhotoBox App 📷"
+        title.text = "Creating an account to use PhotoBox App 📷".localized
         title.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         title.textColor = UIColor.init(named: "witeColor")!
         title.textAlignment = .center
@@ -31,14 +31,14 @@ class SignupVC: UIViewController {
     let emailTF: UITextField = {
         let tF = UITextField()
         tF.text = "saa22@gmail.com"
-        tF.setupTF(with: NSAttributedString(string: "Email",
+        tF.setupTF(with: NSAttributedString(string: "Email".localized,
                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(named: "witeColor")!]))
         return tF
     }()
     let passTF: UITextField = {
         let tF2 = UITextField()
         tF2.text = "1234567890"
-        tF2.setupTF(with: NSAttributedString(string: "Password",
+        tF2.setupTF(with: NSAttributedString(string: "Password".localized,
                                              attributes: [NSAttributedString.Key.foregroundColor:
                                                             UIColor.init(named: "witeColor")!]))
         tF2.isSecureTextEntry = true
@@ -47,7 +47,7 @@ class SignupVC: UIViewController {
     let nameTF: UITextField = {
         let tf3 = UITextField()
         tf3.text = "Sana Alshahrani"
-        tf3.setupTF(with: NSAttributedString(string: "Name",attributes:
+        tf3.setupTF(with: NSAttributedString(string: "Name".localized,attributes:
                                                 [NSAttributedString.Key.foregroundColor:
                                                     UIColor.init(named: "witeColor")!]))
         return tf3
@@ -55,7 +55,7 @@ class SignupVC: UIViewController {
     let button: UIButton = {
         let btn = UIButton()
         btn.backgroundColor = UIColor(#colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 0.7583557533))
-        btn.setupButton(with: "Create Acount")
+        btn.setupButton(with: "Create Acount".localized)
         return btn
     }()
     override func viewDidLoad() {

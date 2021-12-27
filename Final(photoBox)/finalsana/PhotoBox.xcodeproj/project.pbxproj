@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E831E9BB2779D30D0011F0C8 /* Langauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9BA2779D30D0011F0C8 /* Langauge.swift */; };
 		E8A2AE14274E27C900B78D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2AE13274E27C900B78D08 /* AppDelegate.swift */; };
 		E8A2AE16274E27C900B78D08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2AE15274E27C900B78D08 /* SceneDelegate.swift */; };
 		E8A2AE1D274E27CC00B78D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A2AE1C274E27CC00B78D08 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		1F719E2A47174C558C5F187B /* Pods-PhotoBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBox.debug.xcconfig"; path = "Target Support Files/Pods-PhotoBox/Pods-PhotoBox.debug.xcconfig"; sourceTree = "<group>"; };
 		9565F779E0049EAE636C1C6A /* Pods_PhotoBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E741835BBD17DA34BD8DD522 /* Pods-PhotoBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBox.release.xcconfig"; path = "Target Support Files/Pods-PhotoBox/Pods-PhotoBox.release.xcconfig"; sourceTree = "<group>"; };
+		E831E9BA2779D30D0011F0C8 /* Langauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Langauge.swift; sourceTree = "<group>"; };
 		E8A2AE10274E27C900B78D08 /* PhotoBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A2AE13274E27C900B78D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8A2AE15274E27C900B78D08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,9 @@
 		E848A78F275577CA00F09DF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E8A2AE29274E2DDC00B78D08 /* StartVC.swift */,
+				E8A2AE30274E89A300B78D08 /* SignupVC.swift */,
+				E8A2AE2E274E88DF00B78D08 /* LoginVC.swift */,
 				E8F5E0C027746D7B009435A5 /* Extension.swift */,
 			);
 			path = Views;
@@ -130,9 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				FA23F4132760D89E00EFE33D /* chat */,
-				E8A2AE29274E2DDC00B78D08 /* StartVC.swift */,
-				E8A2AE30274E89A300B78D08 /* SignupVC.swift */,
-				E8A2AE2E274E88DF00B78D08 /* LoginVC.swift */,
+				E831E9BA2779D30D0011F0C8 /* Langauge.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8F5E0C127746D7B009435A5 /* Extension.swift in Sources */,
+				E831E9BB2779D30D0011F0C8 /* Langauge.swift in Sources */,
 				E8A2AE14274E27C900B78D08 /* AppDelegate.swift in Sources */,
 				E8A2AE31274E89A300B78D08 /* SignupVC.swift in Sources */,
 				E8A2AE16274E27C900B78D08 /* SceneDelegate.swift in Sources */,
