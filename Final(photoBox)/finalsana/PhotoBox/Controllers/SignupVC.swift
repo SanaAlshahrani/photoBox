@@ -4,6 +4,7 @@
 //
 //  Created by Sana Alshahrani on 19/04/1443 AH.
 //
+
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
@@ -18,6 +19,7 @@ class SignupVC: UIViewController {
         view.layer.cornerRadius = 40
         return view
     }()
+    
     let titlelabel: UILabel = {
         let title = UILabel()
         title.backgroundColor = .clear
@@ -28,6 +30,7 @@ class SignupVC: UIViewController {
         title.numberOfLines = 0
         return title
     }()
+    
     let emailTF: UITextField = {
         let tF = UITextField()
         tF.text = "saa22@gmail.com"
@@ -35,6 +38,7 @@ class SignupVC: UIViewController {
                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(named: "witeColor")!]))
         return tF
     }()
+    
     let passTF: UITextField = {
         let tF2 = UITextField()
         tF2.text = "1234567890"
@@ -44,6 +48,7 @@ class SignupVC: UIViewController {
         tF2.isSecureTextEntry = true
         return tF2
     }()
+    
     let nameTF: UITextField = {
         let tf3 = UITextField()
         tf3.text = "Sana Alshahrani"
@@ -52,17 +57,20 @@ class SignupVC: UIViewController {
                                                     UIColor.init(named: "witeColor")!]))
         return tf3
     }()
+    
     let button: UIButton = {
         let btn = UIButton()
         btn.backgroundColor = UIColor(#colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 0.7583557533))
         btn.setupButton(with: "Create Acount".localized)
         return btn
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .backGround
         setupViews()
     }
+    
     private func setupViews() {
         view.addSubview(containerV)
         containerV.translatesAutoresizingMaskIntoConstraints = false
@@ -114,6 +122,7 @@ class SignupVC: UIViewController {
         titlelabel.topAnchor.constraint(equalTo: containerV.topAnchor, constant: 20).isActive = true
         titlelabel.trailingAnchor.constraint(equalTo: containerV.trailingAnchor, constant: -20).isActive = true
     }
+    
     @objc private func buttonTapped() {
         guard let email = emailTF.text else {return}
         guard let password = passTF.text else {return}
@@ -129,6 +138,7 @@ class SignupVC: UIViewController {
             present(alert, animated: true)
         }
     }
+    
        private func signupUserUsing(email: String, password: String, name: String) {
             Auth.auth().createUser(withEmail: email, password: password) { results, error in
                 
@@ -177,12 +187,12 @@ class SignupVC: UIViewController {
                     
                     self.navigationController?.popToRootViewController(animated: true)
                 }
-                
-                
             }
         }
        
     }
+
+
 extension SignupVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         

@@ -4,6 +4,7 @@
 //
 //  Created by Sana Alshahrani on 19/04/1443 AH.
 //
+
 import UIKit
 import FirebaseAuth
 
@@ -19,6 +20,7 @@ class StartVC: UIViewController {
         view.clipsToBounds = true
         return view
     }()
+    
     let subTitleLabel: UILabel = {
         let title = UILabel()
         title.text = "Sana Alshahrani".localized
@@ -29,6 +31,7 @@ class StartVC: UIViewController {
         title.numberOfLines = 0
         return title
     }()
+    
     let designImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "start1")
@@ -37,6 +40,7 @@ class StartVC: UIViewController {
         image.layer.cornerRadius = 40
         return image
     }()
+    
     let titleLabel: UILabel = {
         let title = UILabel()
         title.backgroundColor = .clear
@@ -47,16 +51,19 @@ class StartVC: UIViewController {
         title.numberOfLines = 0
         return title
     }()
+    
     let signInButton: UIButton = {
         let button = UIButton(type: .system)
         button.setupButton(with:"Sign up".localized)
         return button
     }()
+    
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setupButton(with: "Log in".localized)
         return button
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -64,6 +71,7 @@ class StartVC: UIViewController {
         setupViews()
         setupLabels()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -107,6 +115,7 @@ class StartVC: UIViewController {
         designImage.trailingAnchor.constraint(equalTo: containerV.trailingAnchor, constant: -30).isActive = true
         designImage.topAnchor.constraint(equalTo: containerV.topAnchor, constant: 30).isActive = true
     }
+    
     private func setupLabels() {
         
         view.addSubview(subTitleLabel)
@@ -116,12 +125,15 @@ class StartVC: UIViewController {
          = true
         subTitleLabel.widthAnchor.constraint(equalToConstant: 300).isActive = true
     }
+    
     @objc private func loginButtonTap() {
         navigationController?.pushViewController(LoginVC(), animated: true)
     }
+    
     @objc private func signInButtonTap() {
         navigationController?.pushViewController(SignupVC(), animated: true)
     }
+    
     private func SignedIn() -> Bool {
         return Auth.auth().currentUser != nil
     }

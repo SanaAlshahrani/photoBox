@@ -4,6 +4,7 @@
 //
 //  Created by Sana Alshahrani on 19/04/1443 AH.
 //
+
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
@@ -21,6 +22,7 @@ class LoginVC: UIViewController {
         view.clipsToBounds = true
         return view
     }()
+    
     let designImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "signup")
@@ -29,6 +31,7 @@ class LoginVC: UIViewController {
         image.clipsToBounds = true
         return image
     }()
+    
     let emailTF: UITextField = {
         let tF = UITextField()
         tF.text = "saa22@gmail.com"
@@ -38,6 +41,7 @@ class LoginVC: UIViewController {
                                                             UIColor.init(named: "witeColor")!]))
         return tF
     }()
+    
     let passTF: UITextField = {
         let tF1 = UITextField()
         tF1.text = "1234567890"
@@ -48,6 +52,7 @@ class LoginVC: UIViewController {
         tF1.isSecureTextEntry = true
         return tF1
     }()
+    
     let Button: UIButton = {
         let btn = UIButton(type: .system)
         btn.setupButton(with: "Log in".localized)
@@ -169,14 +174,14 @@ class LoginVC: UIViewController {
                 }
                 
 
-//
-//                                let vc = CategoryVC()
-//                                let nav = UINavigationController()
-//                                nav.viewControllers = [vc]
-//                                nav.modalPresentationStyle = .fullScreen
-//                                nav.modalTransitionStyle = .flipHorizontal
-//                                self.present(nav, animated: true, completion: nil)
-//
+
+                                let vc = CategoryVC()
+                                let nav = UINavigationController()
+                                nav.viewControllers = [vc]
+                                nav.modalPresentationStyle = .fullScreen
+                                nav.modalTransitionStyle = .flipHorizontal
+                                self.present(nav, animated: true, completion: nil)
+
             }
             }
             
