@@ -7,7 +7,7 @@ target 'PhotoBox' do
 
   # Pods for PhotoBox
 	
-	  pod 'Firebase/Auth'
+  pod 'Firebase/Auth'
   	pod 'Firebase/Firestore'
     pod 'Firebase/Database'
     pod 'Firebase'
@@ -19,5 +19,7 @@ target 'PhotoBox' do
     pod 'AMPopTip'
     pod 'JSQMessagesViewController'
     pod 'ImageActionSheet'
+    pod 'SwiftyOnboard'
+    pod 'FSPagerView'
 
 end

@@ -34,8 +34,9 @@ class CategoryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
 
     
     
-   let search = UISearchController()
-    let subTitelLabel = UILabel()
+    let search = UISearchController()
+     let subTitelLabel = UILabel()
+
 
     lazy var collectionView: UICollectionView = {
         let layout = CHTCollectionViewWaterfallLayout()

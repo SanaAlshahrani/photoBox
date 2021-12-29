@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E804745C277C7FD1007A99AB /* ImagesCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804745B277C7FD1007A99AB /* ImagesCV.swift */; };
+		E804745E277C7FDE007A99AB /* DetailsTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804745D277C7FDE007A99AB /* DetailsTV.swift */; };
+		E8047460277C8094007A99AB /* ImageCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804745F277C8094007A99AB /* ImageCVCell.swift */; };
+		E8047462277C814E007A99AB /* adsSliderCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8047461277C814E007A99AB /* adsSliderCVCell.swift */; };
 		E831E9BB2779D30D0011F0C8 /* Langauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9BA2779D30D0011F0C8 /* Langauge.swift */; };
 		E831E9BD277A3F730011F0C8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9BC277A3F730011F0C8 /* Model.swift */; };
 		E831E9BF277A42C90011F0C8 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9BE277A42C90011F0C8 /* CategoryVC.swift */; };
@@ -29,6 +33,10 @@
 		1F719E2A47174C558C5F187B /* Pods-PhotoBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBox.debug.xcconfig"; path = "Target Support Files/Pods-PhotoBox/Pods-PhotoBox.debug.xcconfig"; sourceTree = "<group>"; };
 		9565F779E0049EAE636C1C6A /* Pods_PhotoBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E741835BBD17DA34BD8DD522 /* Pods-PhotoBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBox.release.xcconfig"; path = "Target Support Files/Pods-PhotoBox/Pods-PhotoBox.release.xcconfig"; sourceTree = "<group>"; };
+		E804745B277C7FD1007A99AB /* ImagesCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesCV.swift; sourceTree = "<group>"; };
+		E804745D277C7FDE007A99AB /* DetailsTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTV.swift; sourceTree = "<group>"; };
+		E804745F277C8094007A99AB /* ImageCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCVCell.swift; sourceTree = "<group>"; };
+		E8047461277C814E007A99AB /* adsSliderCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adsSliderCVCell.swift; sourceTree = "<group>"; };
 		E831E9BA2779D30D0011F0C8 /* Langauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Langauge.swift; sourceTree = "<group>"; };
 		E831E9BC277A3F730011F0C8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E831E9BE277A42C90011F0C8 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
@@ -102,6 +110,10 @@
 				E8F5E0C027746D7B009435A5 /* Extension.swift */,
 				E831E9C0277A4AEE0011F0C8 /* ImageAndTextCVCell.swift */,
 				E831E9C4277B26A50011F0C8 /* TabBar.swift */,
+				E804745F277C8094007A99AB /* ImageCVCell.swift */,
+				E8047461277C814E007A99AB /* adsSliderCVCell.swift */,
+				E804745B277C7FD1007A99AB /* ImagesCV.swift */,
+				E804745D277C7FDE007A99AB /* DetailsTV.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,11 +293,15 @@
 				E831E9BB2779D30D0011F0C8 /* Langauge.swift in Sources */,
 				E8A2AE14274E27C900B78D08 /* AppDelegate.swift in Sources */,
 				E831E9BF277A42C90011F0C8 /* CategoryVC.swift in Sources */,
+				E8047460277C8094007A99AB /* ImageCVCell.swift in Sources */,
+				E804745E277C7FDE007A99AB /* DetailsTV.swift in Sources */,
+				E804745C277C7FD1007A99AB /* ImagesCV.swift in Sources */,
 				E8A2AE31274E89A300B78D08 /* SignupVC.swift in Sources */,
 				E831E9C1277A4AEE0011F0C8 /* ImageAndTextCVCell.swift in Sources */,
 				E8A2AE16274E27C900B78D08 /* SceneDelegate.swift in Sources */,
 				E8A2AE2F274E88DF00B78D08 /* LoginVC.swift in Sources */,
 				E831E9C5277B26A50011F0C8 /* TabBar.swift in Sources */,
+				E8047462277C814E007A99AB /* adsSliderCVCell.swift in Sources */,
 				E8A2AE2A274E2DDC00B78D08 /* StartVC.swift in Sources */,
 				E831E9BD277A3F730011F0C8 /* Model.swift in Sources */,
 			);
