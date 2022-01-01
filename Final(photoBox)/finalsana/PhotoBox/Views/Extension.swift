@@ -23,6 +23,7 @@ extension UITextField {
     }
 }
 
+
 extension UIButton {
     open func setupButton(with title: String) {
         backgroundColor = UIColor(#colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 0.7583557533))
@@ -38,6 +39,7 @@ extension UIButton {
         layer.borderColor = UIColor.init(named: "witeColor")!.cgColor
     }
 }
+
 
 extension UIColor {
         static let backGround = UIColor ( #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 0.8747154387) )

@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 import SDWebImage
+
 class ImageCVCell: UICollectionViewCell {
-    static let identifier = "ImageCell"
     
+    static let identifier = "ImageCell"
     private let imageV: UIImageView = {
         let imagev = UIImageView()
         imagev.contentMode = .scaleAspectFill

@@ -22,6 +22,7 @@ class ImageAndTextCVCell: UICollectionViewCell {
         
         return imagev
     }()
+    
     let imageChecklist: UIImageView = {
         let imagev = UIImageView.init(frame: CGRect.init(x: 5, y: 5, width: 30, height: 30))
         imagev.contentMode = .scaleAspectFit
@@ -30,6 +31,7 @@ class ImageAndTextCVCell: UICollectionViewCell {
         
         return imagev
     }()
+    
     private let tintView: UIView = {
         let tintView = UIView()
         tintView.backgroundColor = UIColor(white: 0, alpha: 0.5) //change to your liking
@@ -58,7 +60,6 @@ class ImageAndTextCVCell: UICollectionViewCell {
         labelV.center = contentView.center
 
         contentView.clipsToBounds = true
-       
         
         NSLayoutConstraint.activate([
             imageV.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -70,16 +71,16 @@ class ImageAndTextCVCell: UICollectionViewCell {
         ])
        }
     
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+    
     func configure(image: String , titel : String) {
         imageV.layer.cornerRadius = 20
         imageV.sd_setImage(with: URL.init(string: image), placeholderImage: UIImage.init(named: "AppIcon"))
         labelV.text = titel
     }
-    
- 
 }
 
     

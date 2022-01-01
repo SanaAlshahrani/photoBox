@@ -93,8 +93,8 @@ enum Language: String {
             //so it seems like the is restarted
         }
     }
-
 }
+
 
 extension String {
     var localized: String {
@@ -106,7 +106,6 @@ extension String {
         // return String.localizedStringWithFormat(self.localized, args)
         return String(format: self.localized, locale: Locale.current, arguments: args)
     }
-    
 }
 
 extension String {

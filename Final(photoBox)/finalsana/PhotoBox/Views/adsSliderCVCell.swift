@@ -12,7 +12,6 @@ import FSPagerView
 
 class adsSliderCVCell: UICollectionReusableView , FSPagerViewDataSource{
     static let identifier = "adsSliderCVCell"
-
     var imagesArray = [String]()
     
     override init(frame: CGRect){

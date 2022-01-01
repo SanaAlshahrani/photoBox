@@ -7,14 +7,12 @@
 
 import UIKit
 
-import UIKit
-
 class TabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+   
+    
         viewControllers = [
-        
             barItem(tabBarTitle: "images".localized, tabBarImage: UIImage(systemName:    "photo.on.rectangle.angled")!.withTintColor(UIColor( #colorLiteral(red: 0.7037770748, green: 0.4958333373, blue: 0.6524182558, alpha: 1)), renderingMode: .alwaysOriginal), viewController: ImagesCV()),
            
            

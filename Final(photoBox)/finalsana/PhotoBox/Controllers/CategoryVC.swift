@@ -9,6 +9,7 @@ import CHTCollectionViewWaterfallLayout
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+
 class CategoryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource , CHTCollectionViewDelegateWaterfallLayout {
 
      var filterCategories: [ModelCategory] = []
@@ -287,6 +288,5 @@ extension CategoryVC: UISearchResultsUpdating, UISearchBarDelegate {
          collectionView.reloadData()
       }
     }
-
 }
 

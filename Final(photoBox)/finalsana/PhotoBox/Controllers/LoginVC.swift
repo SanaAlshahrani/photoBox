@@ -12,7 +12,6 @@ import FirebaseFirestore
 class LoginVC: UIViewController {
     
     let db = Firestore.firestore().collection("users")
-    
     let containerV: UIView = {
         let view = UIView()
         view.backgroundColor = .photoBox
@@ -173,7 +172,6 @@ class LoginVC: UIViewController {
                     }
                 }
                 
-
 
                                 let vc = CategoryVC()
                                 let nav = UINavigationController()
