@@ -21,8 +21,8 @@ class TabBar: UITabBarController {
 //            barItem(tabBarTitle: "", tabBarImage: UIImage(systemName: "laptopcomputer.and.arrow.down")!.withTintColor(UIColor( #colorLiteral(red: 0.7037770748, green: 0.4958333373, blue: 0.6524182558, alpha: 1)), renderingMode: .alwaysOriginal), viewController: PlacesVideosVC()),
 //
 //            
-//            barItem(tabBarTitle: "camera".localized, tabBarImage: UIImage(systemName: "camera")!.withTintColor(UIColor( #colorLiteral(red: 0.7037770748, green: 0.4958333373, blue: 0.6524182558, alpha: 1)), renderingMode: .alwaysOriginal), viewController: CameraVC()),
-//
+            barItem(tabBarTitle: "camera".localized, tabBarImage: UIImage(systemName: "camera")!.withTintColor(UIColor( #colorLiteral(red: 0.7037770748, green: 0.4958333373, blue: 0.6524182558, alpha: 1)), renderingMode: .alwaysOriginal), viewController: CameraVC()),
+
 //            
 //            
 //            

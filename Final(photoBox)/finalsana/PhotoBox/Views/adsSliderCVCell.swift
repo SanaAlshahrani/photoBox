@@ -79,8 +79,8 @@ class adsSliderCVCell: UICollectionReusableView , FSPagerViewDataSource{
                 pagerView.topAnchor.constraint(equalTo: self.topAnchor),
                 pagerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                 pagerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-                pagerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                pageControl.bottomAnchor.constraint(equalTo: pagerView.bottomAnchor, constant: -10),
+                pagerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
+                pageControl.bottomAnchor.constraint(equalTo: pagerView.bottomAnchor, constant: -30),
                 pageControl.trailingAnchor.constraint(equalTo: pagerView.trailingAnchor),
                 pageControl.leadingAnchor.constraint(equalTo: pagerView.leadingAnchor),
                

@@ -2,8 +2,8 @@
 //  customPageView.swift
 //  SwiftyOnboard
 //
-//  Created by Jay on 3/25/17.
-//  Copyright © 2017 Juan Pablo Fernandez. All rights reserved.
+//
+//  Created by Sana Alshahrani on 23/05/1443 AH.
 //
 
 import UIKit
