@@ -23,6 +23,7 @@ class ImageInformationVC: UIViewController {
         image.clipsToBounds = true
         return image
     }()
+    
     private let nameOf: UITextField = {
         let nam = UITextField()
         nam.textColor       =  UIColor.init(named: "BlackColor")!
@@ -33,6 +34,7 @@ class ImageInformationVC: UIViewController {
         nam.clipsToBounds = true
         return nam
     }()
+    
     private let nameOf_ar: UITextField = {
         let nam_ar = UITextField()
         nam_ar.textColor       =  UIColor.init(named: "BlackColor")!
@@ -54,6 +56,7 @@ class ImageInformationVC: UIViewController {
         description.clipsToBounds = true
         return description
     }()
+    
     private let bDescription_ar: IQTextView = {
         let description_ar             = IQTextView()
         description_ar.textColor       =  UIColor.init(named: "BlackColor")!

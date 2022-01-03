@@ -103,12 +103,8 @@
                       
                    }else{
                        self.showWelcomeScreen()
-
                    }
             }
-
-            
-            
         }
         
         private func setupProfileImage() {
@@ -125,15 +121,11 @@
             
         }
 
-      
-        
         private func setupCameraButtons() {
             
             flashButton.addTarget(self, action: #selector(flashButtonTapped), for: .touchUpInside)
             
-            
             let stackView = UIStackView(arrangedSubviews:  [flashButton])
-            
             stackView.distribution = .fillEqually
             stackView.spacing = 15
             stackView.axis = .vertical
@@ -145,24 +137,18 @@
             stackView.layer.borderColor = UIColor.cyan.cgColor
             
             view.addSubview(stackView)
-            
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
             stackView.widthAnchor.constraint(equalToConstant: 40).isActive = true
-            
             stackView.heightAnchor.constraint(equalToConstant: 70).isActive = true
-            
         }
         
         private func setupRecordButton(){
             
             recordButton.addTarget(self, action: #selector(recordButtonTapped), for: .touchUpInside)
-            
-            
             recordButton.translatesAutoresizingMaskIntoConstraints = false
             
             view.addSubview(recordButton)
-            
             recordButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
             recordButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             recordButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
@@ -218,8 +204,6 @@
                 
                 
             }catch let err {print("error getting input from device \(err.localizedDescription)")}
-            
-            
             if sessionForAV.canAddOutput(photoOutput) {
                 sessionForAV.addOutput(photoOutput)
             }

@@ -20,6 +20,7 @@
 		E831E9BF277A42C90011F0C8 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9BE277A42C90011F0C8 /* CategoryVC.swift */; };
 		E831E9C1277A4AEE0011F0C8 /* ImageAndTextCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9C0277A4AEE0011F0C8 /* ImageAndTextCVCell.swift */; };
 		E831E9C5277B26A50011F0C8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9C4277B26A50011F0C8 /* TabBar.swift */; };
+		E846BC2F27832B94003F525E /* ImagesCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC2E27832B94003F525E /* ImagesCommentVC.swift */; };
 		E8A2AE14274E27C900B78D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2AE13274E27C900B78D08 /* AppDelegate.swift */; };
 		E8A2AE16274E27C900B78D08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2AE15274E27C900B78D08 /* SceneDelegate.swift */; };
 		E8A2AE1D274E27CC00B78D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A2AE1C274E27CC00B78D08 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		E831E9BE277A42C90011F0C8 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		E831E9C0277A4AEE0011F0C8 /* ImageAndTextCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndTextCVCell.swift; sourceTree = "<group>"; };
 		E831E9C4277B26A50011F0C8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		E846BC2E27832B94003F525E /* ImagesCommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesCommentVC.swift; sourceTree = "<group>"; };
 		E8A2AE10274E27C900B78D08 /* PhotoBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A2AE13274E27C900B78D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8A2AE15274E27C900B78D08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				E82593112781DCD600ADA504 /* CameraVC.swift */,
 				E82593132781DD6900ADA504 /* ImageInformationVC.swift */,
 				E82593152781DDE000ADA504 /* ImageCategoryVC.swift */,
+				E846BC2E27832B94003F525E /* ImagesCommentVC.swift */,
 				FA23F4132760D89E00EFE33D /* chat */,
 				E831E9BA2779D30D0011F0C8 /* Langauge.swift */,
 			);
@@ -315,6 +318,7 @@
 				E831E9C1277A4AEE0011F0C8 /* ImageAndTextCVCell.swift in Sources */,
 				E8A2AE16274E27C900B78D08 /* SceneDelegate.swift in Sources */,
 				E8A2AE2F274E88DF00B78D08 /* LoginVC.swift in Sources */,
+				E846BC2F27832B94003F525E /* ImagesCommentVC.swift in Sources */,
 				E831E9C5277B26A50011F0C8 /* TabBar.swift in Sources */,
 				E8047462277C814E007A99AB /* adsSliderCVCell.swift in Sources */,
 				E8A2AE2A274E2DDC00B78D08 /* StartVC.swift in Sources */,
@@ -473,7 +477,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7KF66RXSZU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -501,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y43E95U4EG;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
