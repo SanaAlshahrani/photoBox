@@ -21,6 +21,18 @@
 		E831E9C1277A4AEE0011F0C8 /* ImageAndTextCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9C0277A4AEE0011F0C8 /* ImageAndTextCVCell.swift */; };
 		E831E9C5277B26A50011F0C8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9C4277B26A50011F0C8 /* TabBar.swift */; };
 		E846BC2F27832B94003F525E /* ImagesCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC2E27832B94003F525E /* ImagesCommentVC.swift */; };
+		E846BC31278637DE003F525E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC30278637DE003F525E /* User.swift */; };
+		E846BC33278637E3003F525E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC32278637E3003F525E /* Message.swift */; };
+		E846BC35278637EB003F525E /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC34278637EB003F525E /* ChatRoom.swift */; };
+		E846BC3727863801003F525E /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC3627863801003F525E /* Recent.swift */; };
+		E846BC3B27863835003F525E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC3A27863835003F525E /* ChatViewController.swift */; };
+		E846BC3D27863859003F525E /* ChatFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC3C27863858003F525E /* ChatFunctions.swift */; };
+		E846BC3F27863887003F525E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC3E27863887003F525E /* MessageTableViewCell.swift */; };
+		E846BC412786388E003F525E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC402786388E003F525E /* UserCell.swift */; };
+		E846BC4327863892003F525E /* ChatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC4227863892003F525E /* ChatsCell.swift */; };
+		E846BC45278638DB003F525E /* ChatsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC44278638DB003F525E /* ChatsTableVC.swift */; };
+		E846BC4D27863BE2003F525E /* ImagesFavoritCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC4C27863BE2003F525E /* ImagesFavoritCV.swift */; };
+		E846BC4F27863C96003F525E /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC4E27863C96003F525E /* UsersVC.swift */; };
 		E8A2AE14274E27C900B78D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2AE13274E27C900B78D08 /* AppDelegate.swift */; };
 		E8A2AE16274E27C900B78D08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2AE15274E27C900B78D08 /* SceneDelegate.swift */; };
 		E8A2AE1D274E27CC00B78D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A2AE1C274E27CC00B78D08 /* Assets.xcassets */; };
@@ -52,6 +64,18 @@
 		E831E9C0277A4AEE0011F0C8 /* ImageAndTextCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndTextCVCell.swift; sourceTree = "<group>"; };
 		E831E9C4277B26A50011F0C8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		E846BC2E27832B94003F525E /* ImagesCommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesCommentVC.swift; sourceTree = "<group>"; };
+		E846BC30278637DE003F525E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E846BC32278637E3003F525E /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E846BC34278637EB003F525E /* ChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		E846BC3627863801003F525E /* Recent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
+		E846BC3A27863835003F525E /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		E846BC3C27863858003F525E /* ChatFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatFunctions.swift; sourceTree = "<group>"; };
+		E846BC3E27863887003F525E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageTableViewCell.swift; path = "../../../../../Last Version/PhotoBox/Views/MessageTableViewCell.swift"; sourceTree = "<group>"; };
+		E846BC402786388E003F525E /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		E846BC4227863892003F525E /* ChatsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatsCell.swift; path = "../../../../../Last Version/PhotoBox/Views/ChatsCell.swift"; sourceTree = "<group>"; };
+		E846BC44278638DB003F525E /* ChatsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsTableVC.swift; sourceTree = "<group>"; };
+		E846BC4C27863BE2003F525E /* ImagesFavoritCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesFavoritCV.swift; sourceTree = "<group>"; };
+		E846BC4E27863C96003F525E /* UsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		E8A2AE10274E27C900B78D08 /* PhotoBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A2AE13274E27C900B78D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8A2AE15274E27C900B78D08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				E831E9BC277A3F730011F0C8 /* Model.swift */,
+				E846BC30278637DE003F525E /* User.swift */,
+				E846BC32278637E3003F525E /* Message.swift */,
+				E846BC34278637EB003F525E /* ChatRoom.swift */,
+				E846BC3627863801003F525E /* Recent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -120,11 +148,15 @@
 				E8F5E0C027746D7B009435A5 /* Extension.swift */,
 				E831E9C0277A4AEE0011F0C8 /* ImageAndTextCVCell.swift */,
 				E831E9C4277B26A50011F0C8 /* TabBar.swift */,
+				E846BC3E27863887003F525E /* MessageTableViewCell.swift */,
+				E846BC402786388E003F525E /* UserCell.swift */,
+				E846BC4227863892003F525E /* ChatsCell.swift */,
 				E804745F277C8094007A99AB /* ImageCVCell.swift */,
 				E8047461277C814E007A99AB /* adsSliderCVCell.swift */,
 				E804745B277C7FD1007A99AB /* ImagesCV.swift */,
 				E804745D277C7FDE007A99AB /* DetailsTV.swift */,
 				E825930F2780D96D00ADA504 /* OnboardVC.swift */,
+				E846BC4C27863BE2003F525E /* ImagesFavoritCV.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				E8A2AE29274E2DDC00B78D08 /* StartVC.swift */,
+				E846BC4E27863C96003F525E /* UsersVC.swift */,
 				E8A2AE30274E89A300B78D08 /* SignupVC.swift */,
 				E8A2AE2E274E88DF00B78D08 /* LoginVC.swift */,
 				E831E9BE277A42C90011F0C8 /* CategoryVC.swift */,
@@ -175,6 +208,9 @@
 				E846BC2E27832B94003F525E /* ImagesCommentVC.swift */,
 				FA23F4132760D89E00EFE33D /* chat */,
 				E831E9BA2779D30D0011F0C8 /* Langauge.swift */,
+				E846BC44278638DB003F525E /* ChatsTableVC.swift */,
+				E846BC3C27863858003F525E /* ChatFunctions.swift */,
+				E846BC3A27863835003F525E /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,21 +345,33 @@
 				E831E9BB2779D30D0011F0C8 /* Langauge.swift in Sources */,
 				E8A2AE14274E27C900B78D08 /* AppDelegate.swift in Sources */,
 				E831E9BF277A42C90011F0C8 /* CategoryVC.swift in Sources */,
+				E846BC4F27863C96003F525E /* UsersVC.swift in Sources */,
 				E8047460277C8094007A99AB /* ImageCVCell.swift in Sources */,
 				E804745E277C7FDE007A99AB /* DetailsTV.swift in Sources */,
 				E82593122781DCD600ADA504 /* CameraVC.swift in Sources */,
 				E804745C277C7FD1007A99AB /* ImagesCV.swift in Sources */,
 				E8A2AE31274E89A300B78D08 /* SignupVC.swift in Sources */,
+				E846BC4D27863BE2003F525E /* ImagesFavoritCV.swift in Sources */,
+				E846BC4327863892003F525E /* ChatsCell.swift in Sources */,
 				E82593102780D96D00ADA504 /* OnboardVC.swift in Sources */,
 				E831E9C1277A4AEE0011F0C8 /* ImageAndTextCVCell.swift in Sources */,
 				E8A2AE16274E27C900B78D08 /* SceneDelegate.swift in Sources */,
 				E8A2AE2F274E88DF00B78D08 /* LoginVC.swift in Sources */,
+				E846BC35278637EB003F525E /* ChatRoom.swift in Sources */,
+				E846BC412786388E003F525E /* UserCell.swift in Sources */,
 				E846BC2F27832B94003F525E /* ImagesCommentVC.swift in Sources */,
+				E846BC3727863801003F525E /* Recent.swift in Sources */,
 				E831E9C5277B26A50011F0C8 /* TabBar.swift in Sources */,
+				E846BC45278638DB003F525E /* ChatsTableVC.swift in Sources */,
 				E8047462277C814E007A99AB /* adsSliderCVCell.swift in Sources */,
+				E846BC33278637E3003F525E /* Message.swift in Sources */,
+				E846BC3F27863887003F525E /* MessageTableViewCell.swift in Sources */,
 				E8A2AE2A274E2DDC00B78D08 /* StartVC.swift in Sources */,
+				E846BC3B27863835003F525E /* ChatViewController.swift in Sources */,
 				E831E9BD277A3F730011F0C8 /* Model.swift in Sources */,
+				E846BC3D27863859003F525E /* ChatFunctions.swift in Sources */,
 				E82593142781DD6900ADA504 /* ImageInformationVC.swift in Sources */,
+				E846BC31278637DE003F525E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,19 +3,21 @@
 //  PhotoBox
 //
 //  Created by Sana Alshahrani on 20/04/1443 AH.
+//
 
 import CHTCollectionViewWaterfallLayout
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class ImagesCommentVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource , CHTCollectionViewDelegateWaterfallLayout {
+class ImagesFavoritCV: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource , CHTCollectionViewDelegateWaterfallLayout {
     
     var filterUsers: [Model] = []
     var users: [Model] = []
     var photos: [Model] = []
     
     public func setupSearchBar() {
+        
         search.loadViewIfNeeded()
         search.searchResultsUpdater = self
         search.obscuresBackgroundDuringPresentation = false
@@ -24,16 +26,21 @@ class ImagesCommentVC: UIViewController, UICollectionViewDelegate, UICollectionV
         search.searchBar.placeholder = "Search for a images"
         search.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = true
+        
         navigationItem.searchController = search
         navigationItem.hidesSearchBarWhenScrolling = true
         search.searchBar.delegate = self
     }
     
+    
+    
     let search = UISearchController()
+    
     lazy var collectionView: UICollectionView = {
         let layout = CHTCollectionViewWaterfallLayout()
         layout.itemRenderDirection = .leftToRight
-        layout.columnCount = 2
+        layout.columnCount = 3
+        
         
         let collectionV = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionV.register(ImageCVCell.self,forCellWithReuseIdentifier: ImageCVCell.identifier)
@@ -43,11 +50,13 @@ class ImagesCommentVC: UIViewController, UICollectionViewDelegate, UICollectionV
         return collectionV
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Comment Images"
+        navigationItem.title = "Favorit Images".localized
         navigationController?.navigationBar.prefersLargeTitles = true
+        
         collectionView.backgroundColor = .backGround
         view.addSubview(collectionView)
         NSLayoutConstraint.activate([
@@ -57,13 +66,15 @@ class ImagesCommentVC: UIViewController, UICollectionViewDelegate, UICollectionV
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
         setupSearchBar()
+        
+        //
         photos.removeAll()
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
                 let id_user =  user?.uid ?? ""
                 let ref = Database.database().reference()
                 // get
-                ref.child("Comment").child(id_user).observeSingleEvent(of: .value) { snapshot in
+                ref.child("Like").child(id_user).observeSingleEvent(of: .value) { snapshot in
                     let value = (snapshot.value as? NSDictionary)?.allValues
                     if value != nil {
                         for curentCategory in value!{
@@ -84,21 +95,39 @@ class ImagesCommentVC: UIViewController, UICollectionViewDelegate, UICollectionV
                                     let name_ar = value?["name_ar"] as? String ?? ""
                                     let descripe_ar  = value?["descripe_ar"] as? String ?? ""
                                     
+                                    
                                     self.photos.append(Model.init(image: image, name: name, descripe: descripe, name_ar: name_ar , descripe_ar: descripe_ar, id: id, categoryID: categoryId, userID: userID))
+                                    
+                                    
+                                    
                                 }
                                 self.collectionView.reloadData()
+
                             })
+
+                            
+                            
+                            
                         }
+                        
                     }
+                    
                 }
-             
+                
+                
+                
+                
+                
+                
             }else{
                 let alert = UIAlertController(title: "Login needed", message: "This feature requires login, please login to your account.", preferredStyle: .alert)
+                
                 alert.addAction(.init(title: "Login / Signup", style: .default, handler: { (action) in
                     UserDefaults.standard.set(false, forKey: "isShowLoginPrompt")
                     let vc = StartVC()
                     self.navigationController?.pushViewController(vc, animated: true)
                 }))
+                
                 alert.addAction(.init(title: "Cancel", style: .cancel, handler: nil))
                 UserDefaults.standard.set(true, forKey: "isShowLoginPrompt")
                 self.present(alert, animated: true, completion: nil)
@@ -113,6 +142,7 @@ class ImagesCommentVC: UIViewController, UICollectionViewDelegate, UICollectionV
         }else {
             return photos.count
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -125,13 +155,14 @@ class ImagesCommentVC: UIViewController, UICollectionViewDelegate, UICollectionV
         }else {
             cell.configure(image: photos[indexPath.row].image)
         }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(
-            width: view.frame.size.width/2,
-            height: CGFloat.random(in: 200...600)
+            width: view.frame.size.width/3,
+            height: 200
         )
     }
     
@@ -140,22 +171,33 @@ class ImagesCommentVC: UIViewController, UICollectionViewDelegate, UICollectionV
             let vc = DetailsTV()
             vc.curentModel = filterUsers[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
+            
+            
         }else {
             let vc = DetailsTV()
             
             vc.curentModel = photos[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
+            
         }
+        
+        
     }
+    
 }
 
-extension ImagesCommentVC: UISearchResultsUpdating, UISearchBarDelegate {
+
+
+
+extension ImagesFavoritCV: UISearchResultsUpdating, UISearchBarDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
         if !searchController.isActive {
             return
         }
+        
         let searchBar = search.searchBar
+        
         if let userEnteredSearchText = searchBar.text {
             findResultsBasedOnSearch(with: userEnteredSearchText)
         }
