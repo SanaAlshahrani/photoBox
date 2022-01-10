@@ -26,7 +26,7 @@ class TabBar: UITabBarController {
             
             
             
-//            barItem(tabBarTitle: "Settings".localized, tabBarImage: UIImage(systemName: "person.circle")!.withTintColor(UIColor( #colorLiteral(red: 0.7037770748, green: 0.4958333373, blue: 0.6524182558, alpha: 1)), renderingMode: .alwaysOriginal), viewController: ProfileVC()),
+            barItem(tabBarTitle: "Settings".localized, tabBarImage: UIImage(systemName: "person.circle")!.withTintColor(UIColor( #colorLiteral(red: 0.7037770748, green: 0.4958333373, blue: 0.6524182558, alpha: 1)), renderingMode: .alwaysOriginal), viewController: ProfileVC()),
 
             
         ]
