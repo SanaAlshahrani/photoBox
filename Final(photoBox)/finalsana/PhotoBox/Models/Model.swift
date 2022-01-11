@@ -20,6 +20,22 @@ struct Model {
 
 
 }
+struct Video {
+    let image: String
+    let name: String
+    let desc: String
+    let vedioUrl: String
+
+
+}
+struct Place {
+    let image: String
+    let name: String
+    let price: String
+    let phone: String
+
+
+}
   
 
     class ModelCategory: NSObject, Decodable , Encodable{

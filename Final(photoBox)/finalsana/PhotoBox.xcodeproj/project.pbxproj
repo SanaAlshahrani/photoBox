@@ -22,6 +22,12 @@
 		E831E9C5277B26A50011F0C8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831E9C4277B26A50011F0C8 /* TabBar.swift */; };
 		E833A102278C4218006C4B45 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E833A101278C4218006C4B45 /* ProfileVC.swift */; };
 		E833A104278C429B006C4B45 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E833A103278C429B006C4B45 /* EditProfileVC.swift */; };
+		E83B619A278DC771002D53B7 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B6199278DC771002D53B7 /* CardViewCell.swift */; };
+		E83B619C278DC782002D53B7 /* JYCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B619B278DC782002D53B7 /* JYCardView.swift */; };
+		E83B619E278DC789002D53B7 /* JYCardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B619D278DC789002D53B7 /* JYCardViewLayout.swift */; };
+		E83B61A0278DC790002D53B7 /* JYCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B619F278DC790002D53B7 /* JYCollectionView.swift */; };
+		E83B61A2278DC7C5002D53B7 /* PlacesVideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B61A1278DC7C5002D53B7 /* PlacesVideosVC.swift */; };
+		E83B61A4278DC7F0002D53B7 /* PlacesVediosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B61A3278DC7F0002D53B7 /* PlacesVediosCell.swift */; };
 		E846BC2F27832B94003F525E /* ImagesCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC2E27832B94003F525E /* ImagesCommentVC.swift */; };
 		E846BC31278637DE003F525E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC30278637DE003F525E /* User.swift */; };
 		E846BC33278637E3003F525E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BC32278637E3003F525E /* Message.swift */; };
@@ -67,6 +73,12 @@
 		E831E9C4277B26A50011F0C8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		E833A101278C4218006C4B45 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		E833A103278C429B006C4B45 /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		E83B6199278DC771002D53B7 /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		E83B619B278DC782002D53B7 /* JYCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYCardView.swift; sourceTree = "<group>"; };
+		E83B619D278DC789002D53B7 /* JYCardViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYCardViewLayout.swift; sourceTree = "<group>"; };
+		E83B619F278DC790002D53B7 /* JYCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYCollectionView.swift; sourceTree = "<group>"; };
+		E83B61A1278DC7C5002D53B7 /* PlacesVideosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesVideosVC.swift; sourceTree = "<group>"; };
+		E83B61A3278DC7F0002D53B7 /* PlacesVediosCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesVediosCell.swift; sourceTree = "<group>"; };
 		E846BC2E27832B94003F525E /* ImagesCommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesCommentVC.swift; sourceTree = "<group>"; };
 		E846BC30278637DE003F525E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E846BC32278637E3003F525E /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -149,14 +161,19 @@
 		E848A78F275577CA00F09DF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E8F5E0C027746D7B009435A5 /* Extension.swift */,
+				E83B6199278DC771002D53B7 /* CardViewCell.swift */,
+				E83B619B278DC782002D53B7 /* JYCardView.swift */,
+				E83B619D278DC789002D53B7 /* JYCardViewLayout.swift */,
+				E83B619F278DC790002D53B7 /* JYCollectionView.swift */,
 				E831E9C0277A4AEE0011F0C8 /* ImageAndTextCVCell.swift */,
+				E8F5E0C027746D7B009435A5 /* Extension.swift */,
 				E831E9C4277B26A50011F0C8 /* TabBar.swift */,
 				E846BC3E27863887003F525E /* MessageTableViewCell.swift */,
 				E846BC402786388E003F525E /* UserCell.swift */,
 				E846BC4227863892003F525E /* ChatsCell.swift */,
 				E804745F277C8094007A99AB /* ImageCVCell.swift */,
 				E8047461277C814E007A99AB /* adsSliderCVCell.swift */,
+				E83B61A3278DC7F0002D53B7 /* PlacesVediosCell.swift */,
 				E804745B277C7FD1007A99AB /* ImagesCV.swift */,
 				E804745D277C7FDE007A99AB /* DetailsTV.swift */,
 				E825930F2780D96D00ADA504 /* OnboardVC.swift */,
@@ -209,6 +226,7 @@
 				E8A2AE2E274E88DF00B78D08 /* LoginVC.swift */,
 				E831E9BE277A42C90011F0C8 /* CategoryVC.swift */,
 				E82593112781DCD600ADA504 /* CameraVC.swift */,
+				E83B61A1278DC7C5002D53B7 /* PlacesVideosVC.swift */,
 				E82593132781DD6900ADA504 /* ImageInformationVC.swift */,
 				E82593152781DDE000ADA504 /* ImageCategoryVC.swift */,
 				E846BC2E27832B94003F525E /* ImagesCommentVC.swift */,
@@ -349,6 +367,7 @@
 				E82593162781DDE000ADA504 /* ImageCategoryVC.swift in Sources */,
 				E8F5E0C127746D7B009435A5 /* Extension.swift in Sources */,
 				E831E9BB2779D30D0011F0C8 /* Langauge.swift in Sources */,
+				E83B61A4278DC7F0002D53B7 /* PlacesVediosCell.swift in Sources */,
 				E8A2AE14274E27C900B78D08 /* AppDelegate.swift in Sources */,
 				E831E9BF277A42C90011F0C8 /* CategoryVC.swift in Sources */,
 				E846BC4F27863C96003F525E /* UsersVC.swift in Sources */,
@@ -356,23 +375,28 @@
 				E804745E277C7FDE007A99AB /* DetailsTV.swift in Sources */,
 				E82593122781DCD600ADA504 /* CameraVC.swift in Sources */,
 				E833A102278C4218006C4B45 /* ProfileVC.swift in Sources */,
+				E83B619E278DC789002D53B7 /* JYCardViewLayout.swift in Sources */,
 				E804745C277C7FD1007A99AB /* ImagesCV.swift in Sources */,
 				E8A2AE31274E89A300B78D08 /* SignupVC.swift in Sources */,
 				E846BC4D27863BE2003F525E /* ImagesFavoritCV.swift in Sources */,
 				E846BC4327863892003F525E /* ChatsCell.swift in Sources */,
 				E82593102780D96D00ADA504 /* OnboardVC.swift in Sources */,
+				E83B619C278DC782002D53B7 /* JYCardView.swift in Sources */,
 				E831E9C1277A4AEE0011F0C8 /* ImageAndTextCVCell.swift in Sources */,
 				E8A2AE16274E27C900B78D08 /* SceneDelegate.swift in Sources */,
 				E8A2AE2F274E88DF00B78D08 /* LoginVC.swift in Sources */,
 				E846BC35278637EB003F525E /* ChatRoom.swift in Sources */,
 				E846BC412786388E003F525E /* UserCell.swift in Sources */,
 				E846BC2F27832B94003F525E /* ImagesCommentVC.swift in Sources */,
+				E83B61A0278DC790002D53B7 /* JYCollectionView.swift in Sources */,
 				E846BC3727863801003F525E /* Recent.swift in Sources */,
 				E833A104278C429B006C4B45 /* EditProfileVC.swift in Sources */,
 				E831E9C5277B26A50011F0C8 /* TabBar.swift in Sources */,
+				E83B61A2278DC7C5002D53B7 /* PlacesVideosVC.swift in Sources */,
 				E846BC45278638DB003F525E /* ChatsTableVC.swift in Sources */,
 				E8047462277C814E007A99AB /* adsSliderCVCell.swift in Sources */,
 				E846BC33278637E3003F525E /* Message.swift in Sources */,
+				E83B619A278DC771002D53B7 /* CardViewCell.swift in Sources */,
 				E846BC3F27863887003F525E /* MessageTableViewCell.swift in Sources */,
 				E8A2AE2A274E2DDC00B78D08 /* StartVC.swift in Sources */,
 				E846BC3B27863835003F525E /* ChatViewController.swift in Sources */,
