@@ -140,4 +140,5 @@ auth.logout()
 
 ## Slides
 Repository link: https://github.com/SanaAlshahrani/photoBox
-presentation link: 
+
+presentation link: https://docs.google.com/presentation/d/1NP44Mlv-D6OQKNl9h-g7zYecziX0rPYSSS7zW2uEXoY/edit?usp=sharing
