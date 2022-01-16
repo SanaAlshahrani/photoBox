@@ -9,6 +9,7 @@
 import UIKit
 
 protocol JYCardViewDataSource: NSObject {
+    
     func numberOfItems(in cardView: JYCardView) -> Int
     func cardView(cardView: JYCardView, cellForItemAt index: Int) -> UICollectionViewCell
    
@@ -82,7 +83,6 @@ extension JYCardView {
             collectionView.insertItems(at: atIndexPath)
         }
     }
-    
     func performBatchUpdates(updates: (()->Void)?, completion: ((Bool)->Void)?) {
         collectionView.performBatchUpdates(updates, completion: completion)
     }
@@ -105,7 +105,6 @@ extension JYCardView {
             
             panGesture.setTranslation(.zero, in: panGesture.view)
         case .ended:
-            
             if movingPoint.x > 100 {
                 UIView.animate(withDuration: 0.25) {
                     let currentTransform = cell.transform

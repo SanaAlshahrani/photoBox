@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SDWebImage
+
 class ImageAndTextCVCell: UICollectionViewCell {
     static let identifier = "ImageAndTextCVCell"
     

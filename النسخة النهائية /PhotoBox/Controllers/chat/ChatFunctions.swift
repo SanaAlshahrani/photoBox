@@ -36,9 +36,6 @@ struct ChatFunctions{
         self.reciverImage = user2.avatar ?? ""
         self.reciverName  = user2.name
         self.chatRoom_id  = chatRoomId
-
-        //        self.createChatRoomId(user1, user2: user2, members:members, chatRoomId: chatRoomId)
-        
     }
     
     fileprivate func createChatRoomId(_ user1: User, user2: User, members:[String], chatRoomId: String)
@@ -65,25 +62,11 @@ struct ChatFunctions{
             }
         })
       
-        //        { (error) in
-        //
-        //            DispatchQueue.main.async(execute: {
-        //            })        }
-        
-        
     }
-    
     
     fileprivate func createNewChatRoomId(_ username: String, other_Username: String,userId: String,other_UserId: String,members: [String],chatRoomId: String,lastMessage: String,userPhotoUrl: String,other_UserPhotoUrl: String, date: TimeInterval)
     {
-        //let newChatRoom = ChatRoom(username: username, other_Username: other_Username, userId: userId, other_UserId: other_UserId, members: members, chatRoomId: chatRoomId, lastMessage: lastMessage, userPhotoUrl: userPhotoUrl, other_UserPhotoUrl: other_UserPhotoUrl,date:date)
-        
-        //let chatRoomRef = databaseRef.child("chat_rooms").child(chatRoomId)
-        //chatRoomRef.setValue(newChatRoom.toAnyObject())
-        
+       
     }
-    
-    
-    
     
 }

@@ -85,9 +85,7 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
         self.showLoadEarlierMessagesHeader = self.count > 20
         self.downloadAvatrImage(url: self.recever.avatar ?? "")
         self.getMyAvatar()
-        //        notificationToken = realm.addNotificationBlock { [unowned self] note, realm in
-        //            self.reloadData()
-        //        }
+       
         CountOfMessages()
         typingObserver()
         observeTypingUser()
@@ -114,21 +112,9 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
     {
         super.viewWillAppear(animated)
         
-        // Mark - Customize Chat
-        
-        //        let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 0))
-        //        let sendImage = UIImage(named: "send-icon")
-        //        rightButton.setImage(sendImage, for: UIControlState.normal)
-        //        self.inputToolbar.contentView.rightBarButtonItem = rightButton
-        //        self.inputToolbar.contentView.backgroundColor = UIColor(red:0.93, green:0.93, blue:0.93, alpha:.00)
+     
         self.inputToolbar.contentView.leftBarButtonItem.isHidden = true
-        
-        //        self.inputToolbar.contentView.backgroundColor = UIColor.init(named: "witeColor")!
-        //        self.inputToolbar.contentView.textView.layer.borderWidth = 0
-        //        var frame : CGRect = self.inputToolbar.contentView.textView.frame
-        //        frame.origin.x = 0
-        //        self.inputToolbar.contentView.textView.frame = frame
-        
+       
         self.title = recever.name
         databaseRef.child("Seen").child(self.chatRoomId).child(senderId).setValue(["counter":0])
         databaseRef.child("chat_rooms").child(chatRoomId).child("Active").child(senderId).setValue(["Active":true])
@@ -143,22 +129,7 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
         
         
     }
-    
-    //    func insertMessages()
-    //    {
-    //        insertCounter += 0
-    //        refreshCollectionView2()
-    //    }
-    
-    //    func refreshCollectionView2()
-    //    {
-    //        insertCounter +=
-    //        RealmFunctions.shared.loadMessage(pageSize: 0, pageNumber: insertCounter, GroupId: self.chatRoomId)
-    //        showLoadEarlierMessagesHeader = true
-    //        collectionView?.reloadData()
-    //    }
-    
-    
+   
     fileprivate func observeIsActive()
     {
         let typingRef = databaseRef.child("chat_rooms").child(chatRoomId).child("TypeIndicator").child("\(recever.id)")
@@ -224,11 +195,8 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
                     self.collectionView.semanticContentAttribute = .forceLeftToRight
                     
                     
-                    
-                    //                setTransform:CGAffineTransformMakeScale(-1, 1)];
-                    
                 })
-                ///
+               
                 
             }
         }
@@ -371,8 +339,6 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
                 }
             }}
         
-        //        messageBubbleContainerView
-        ////////////
         
         if message.isMediaMessage
         {
@@ -472,14 +438,9 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
                         
                         
                     })
-                    
-                    
-                    //                        NSSendNotification.send.sendNotificationIos(idsArray: [(self.recever.fcmToken ?? "")] , title: (self.sender.name ) , body: text , type: "Chat", userId: "\(self.sender.id)", data: ["":""])
-                    
+                
                 }
-                
                 self.finishSendingMessage()
-                
             }
         }
         
@@ -535,8 +496,7 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
             self.finishSendingMessage()
         }
     }
-    
-    
+   
     fileprivate func saveMediaMessage(withImage image: UIImage?, withVideo: URL?)
     {
         
@@ -578,33 +538,6 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
                                 self.databaseRef.child("chat_rooms").child(self.chatRoomId).child("TypeIndicator").child("\(self.sender.id)").child("TypeStatus").setValue(false)
                                 self.databaseRef.child("Recent").child(self.chatRoomId).setValue(message.toAnyObject())
                                 
-                                
-                                //                            let lastMessageRef = self.databaseRef.child("chat_rooms").child(self.chatRoomId).child(NSConstant.MyConstant.lastMessage)
-                                
-                                //                            lastMessageRef.setValue("Photo Message", withCompletionBlock: { (error, ref) in
-                                //                                if error != nil
-                                //                                {
-                                
-                                //                                }
-                                //                                else
-                                //                                {
-                                //
-                                //                                }
-                                //                            })
-                                
-                                //                            let lastTimeRef = self.databaseRef.child("chat_rooms").child(self.chatRoomId).child("date")
-                                //                                lastTimeRef.setValue(Date().timeIntervalSince970, withCompletionBlock: { (error, ref) in
-                                //                                if error == nil
-                                //                                {
-                                //
-                                //                                }
-                                //                                else
-                                //                                {
-                                //
-                                //                                }
-                                //                            })
-                                //
-                                
                                 if !self.isReciverActive
                                 {
                                     let unSeenMessage = self.databaseRef.child("Seen").child(self.chatRoomId).child("\(self.recever.id)").child("counter")
@@ -622,12 +555,7 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
                                     
                                     
                                 }
-                                
-                                //                            let senderId = userData.key
-                                //                            let text = ""
-                                //                            let displayName = userData.name
-                                //                            self.messages.append(JSQMessage(senderId: senderId, displayName: displayName, text: text))
-                                
+                            
                                 JSQSystemSoundPlayer.jsq_playMessageSentSound()
                                 self.finishSendingMessage()
                             }
@@ -639,34 +567,7 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
                                 
                                 self.databaseRef.child("chat_rooms").child(self.chatRoomId).child("TypeIndicator").child("\(self.sender.id)").child("TypeStatus").setValue(false)
                                 self.databaseRef.child("Recent").child(self.chatRoomId).setValue(message.toAnyObject())
-                                
-                                
-                                //                            let lastMessageRef = self.databaseRef.child("chat_rooms").child(self.chatRoomId).child(NSConstant.MyConstant.lastMessage)
-                                
-                                //                            lastMessageRef.setValue("Photo Message", withCompletionBlock: { (error, ref) in
-                                //                                if error != nil
-                                //                                {
-                                
-                                //                                }
-                                //                                else
-                                //                                {
-                                //
-                                //                                }
-                                //                            })
-                                
-                                //                            let lastTimeRef = self.databaseRef.child("chat_rooms").child(self.chatRoomId).child("date")
-                                //                                lastTimeRef.setValue(Date().timeIntervalSince970, withCompletionBlock: { (error, ref) in
-                                //                                if error == nil
-                                //                                {
-                                //
-                                //                                }
-                                //                                else
-                                //                                {
-                                //
-                                //                                }
-                                //                            })
-                                //
-                                
+               
                                 if !self.isReciverActive
                                 {
                                     let unSeenMessage = self.databaseRef.child("Seen").child(self.chatRoomId).child("\(self.recever.id)").child("counter")
@@ -679,17 +580,9 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
                                         self.databaseRef.child("Seen").child(self.chatRoomId).child("\(self.recever.id)").setValue(["counter":countNum])
                                         
                                     })
-                                    
-                                    
-                                    //                                                        NSSendNotification.send.sendNotificationIos(idsArray: [(self.recever.fcmToken ?? "")] , title: (self.sender.name ) , body: "Media" , type: "Chat", userId: "\(self.sender.id)", data: ["":""])
-                                    
+                            
                                 }
-                                
-                                //                            let senderId = userData.key
-                                //                            let text = ""
-                                //                            let displayName = userData.name
-                                //                            self.messages.append(JSQMessage(senderId: senderId, displayName: displayName, text: text))
-                                
+                           
                                 self.finishSendingMessage()
                             }
                         })
@@ -730,29 +623,6 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
                         messageRefSender.setValue(message.toAnyObject(), withCompletionBlock: { (error, ref) in
                             if error == nil
                             {
-                                
-                                
-                                //                            let lastMessageRef = self.databaseRef.child("chat_rooms").child(self.chatRoomId).child("lastMessage")
-                                //                            lastMessageRef.setValue(String(describing: newMetaData!.downloadURL()!), withCompletionBlock: { (error, ref) in
-                                //                                if error != nil
-                                //                                {
-                                
-                                //                                }
-                                //                                else
-                                //                                {
-                                //
-                                //                                }
-                                //                            })
-                                
-                                //                            let lastTimeRef = self.databaseRef.child("chat_rooms").child(self.chatRoomId).child("date")
-                                //                            lastTimeRef.setValue(Date().timeIntervalSince970, withCompletionBlock: { (error, ref) in
-                                //                                if error == nil {
-                                //
-                                //                                }else
-                                //                                {
-                                //
-                                //                                }
-                                //                            })
                                 JSQSystemSoundPlayer.jsq_playMessageSentSound()
                                 self.finishSendingMessage()
                             }
@@ -760,30 +630,7 @@ class ChatViewController: JSQMessagesViewController, UIImagePickerControllerDele
                         messageRefResiver.setValue(message.toAnyObject(), withCompletionBlock: { (error, ref) in
                             if error == nil
                             {
-                                
-                                
-                                //                            let lastMessageRef = self.databaseRef.child("chat_rooms").child(self.chatRoomId).child("lastMessage")
-                                //                            lastMessageRef.setValue(String(describing: newMetaData!.downloadURL()!), withCompletionBlock: { (error, ref) in
-                                //                                if error != nil
-                                //                                {
-                                
-                                //                                }
-                                //                                else
-                                //                                {
-                                //
-                                //                                }
-                                //                            })
-                                
-                                //                            let lastTimeRef = self.databaseRef.child("chat_rooms").child(self.chatRoomId).child("date")
-                                //                            lastTimeRef.setValue(Date().timeIntervalSince970, withCompletionBlock: { (error, ref) in
-                                //                                if error == nil {
-                                //
-                                //                                }else
-                                //                                {
-                                //
-                                //                                }
-                                //                            })
-                                //                             NSSendNotification.send.sendNotificationIos(idsArray: [(self.recever.fcmToken ?? "")] , title: (self.sender.name ) , body: "Media" , type: "Chat", userId: "\(self.sender.id)", data: ["":""])
+                           
                                 self.finishSendingMessage()
                             }
                         })

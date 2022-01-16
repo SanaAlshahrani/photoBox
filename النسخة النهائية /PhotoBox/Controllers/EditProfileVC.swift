@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
+
 class EditProfileVC: UIViewController {
     
     var curentUser : User!
@@ -236,23 +237,6 @@ class EditProfileVC: UIViewController {
         }
     }
     
-    func date_format(date: String ) -> String {
-          // write your code here
-    
-              // write your code here
-              let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy/MM/dd"
-
-         let dateFormatterGet1 = DateFormatter()
-         
-        dateFormatterGet1.dateFormat = "yyyy/MM/dd|yyyy-MM-dd|MM/dd/yyy"
-
-        let dd = dateFormatterGet.date(from: date)!
-
-        let s2 = dateFormatterGet1.string(from:dd)
-
-              return  s2
-        }
 }
 
 extension EditProfileVC: UINavigationControllerDelegate, UIImagePickerControllerDelegate {

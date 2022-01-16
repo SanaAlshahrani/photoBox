@@ -37,7 +37,6 @@
         let previewContainer: UIView = { // الصورة بعد الالتقاط
             let pC = UIView()
             
-           
             return pC
         }()
         let cancelPhotoButton: UIButton = { // نكنسل الصورة
@@ -67,34 +66,19 @@
             return img
         }()
         
-        let profileImage: UIImageView = {
-            let img = UIImageView()
-            img.contentMode = .scaleAspectFill
-            img.layer.cornerRadius = 60/2
-            img.layer.borderColor = UIColor.init(named: "witeColor")!.cgColor
-            img.layer.borderWidth = 2
-            img.isHidden  = true 
-            img.clipsToBounds = true
-            return img
-        }()
-        
-        
-     
-        
         override func viewDidLoad() {
             super.viewDidLoad()
             
             view.backgroundColor = UIColor.init(named: "BlackColor")!
             view.layer.addSublayer(videoPreviewLayer)
            
-            navigationItem.title = "SnapTest"
+            navigationItem.title = "PhotoBox"
             
             setupRecordButton()
             
             hasUserGavePermissionForCamera()
             setupCameraButtons()
             
-            setupProfileImage()
             
         }
         
@@ -111,32 +95,13 @@
                        self.recordButton.removeFromSuperview()
                        self.stackView1.removeFromSuperview()
                        self.stackView2.removeFromSuperview()
-                       self.profileImage.removeFromSuperview()
-                       self.showWelcomeScreen()
+                       
 
                    }
             }
-
-            
-            
+ 
         }
-        
-        private func setupProfileImage() {
-            profileImage.isUserInteractionEnabled = true
-            profileImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(profileBarImageTapped)))
-            profileImage.translatesAutoresizingMaskIntoConstraints = false
-            
-            view.addSubview(profileImage)
-            
-            profileImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
-            profileImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
-            profileImage.widthAnchor.constraint(equalToConstant: 60).isActive = true
-            profileImage.heightAnchor.constraint(equalToConstant: 60).isActive = true
-            
-        }
-
       
-        
         private func setupCameraButtons() {
             
             flashButton.addTarget(self, action: #selector(flashButtonTapped), for: .touchUpInside)
@@ -167,24 +132,15 @@
         private func setupRecordButton(){
             
             recordButton.addTarget(self, action: #selector(recordButtonTapped), for: .touchUpInside)
-            
-            
             recordButton.translatesAutoresizingMaskIntoConstraints = false
             
             view.addSubview(recordButton)
-            
             recordButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
             recordButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             recordButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
             recordButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         }
-        private func showWelcomeScreen() {
-            let vc = UINavigationController(rootViewController: StartVC())
-//            vc.modalTransitionStyle = .flipHorizontal
-//            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-        }
-        
+       
         private func hasUserGavePermissionForCamera() {
             switch AVCaptureDevice.authorizationStatus(for: .video) {
             case .authorized:
@@ -202,7 +158,6 @@
                         }
                     }
                 }
-                
             case .restricted:
                 
                 let alert = UIAlertController(title: "Oops", message: "To allow this app to function probably, please consult your parents to give permission.", preferredStyle: .alert)
@@ -225,10 +180,7 @@
                     sessionForAV.addInput(inputDevice)
                 }
                 
-                
-                
             }catch let err {print("error getting input from device \(err.localizedDescription)")}
-            
             
             if sessionForAV.canAddOutput(photoOutput) {
                 sessionForAV.addOutput(photoOutput)
@@ -247,7 +199,6 @@
         
         private func toggleFlash(on: Bool ) {
             guard let device = AVCaptureDevice.default(for: .video), device.hasTorch else { return }
-            
             do {
                 try device.lockForConfiguration()
                 
@@ -265,7 +216,6 @@
         
         
         private func setupPreviewButtons() {
-            
             
             savePhotoButton.addTarget(self, action: #selector(savePreviewPhotoToLibrary), for: .touchUpInside)
             cancelPhotoButton.addTarget(self, action: #selector(cancelPreviewPhoto), for: .touchUpInside)
@@ -346,9 +296,6 @@
             
         }
         
-        @objc private func profileBarImageTapped() {
-            navigationController?.pushViewController(ProfileVC(), animated: true)
-        }
     }
 
     extension CameraVC: AVCapturePhotoCaptureDelegate {
@@ -364,7 +311,6 @@
             setupPreviewButtons()
             
             view.addSubview(previewContainer)
-           //
            let vc = ImageInformationVC()
             vc.image = processedImage
             self.navigationController?.pushViewController(vc, animated: true)
@@ -375,11 +321,10 @@
             super.viewWillDisappear(animated)
 
             DispatchQueue.main.async {
-                    self.userProcessedImage.removeFromSuperview()
-                    self.previewContainer.removeFromSuperview()
+                self.userProcessedImage.removeFromSuperview()
+                self.previewContainer.removeFromSuperview()
                 self.userProcessedImage.removeFromSuperview()
                 self.recordButton.removeFromSuperview()
-                self.profileImage.removeFromSuperview()
                 self.videoPreviewLayer.removeFromSuperlayer()
               
                 }

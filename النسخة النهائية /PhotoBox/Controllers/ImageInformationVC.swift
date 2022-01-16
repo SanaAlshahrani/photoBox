@@ -11,6 +11,7 @@ import SDWebImage
 import FirebaseAuth
 import FirebaseDatabase
 import IQKeyboardManagerSwift
+
 class ImageInformationVC: UIViewController {
     
     var image : UIImage!
@@ -23,6 +24,7 @@ class ImageInformationVC: UIViewController {
         image.clipsToBounds = true
         return image
     }()
+    
     private let nameOf: UITextField = {
         let nam = UITextField()
         nam.textColor       =  UIColor.init(named: "BlackColor")!
@@ -33,6 +35,7 @@ class ImageInformationVC: UIViewController {
         nam.clipsToBounds = true
         return nam
     }()
+    
     private let nameOf_ar: UITextField = {
         let nam_ar = UITextField()
         nam_ar.textColor       =  UIColor.init(named: "BlackColor")!
@@ -54,6 +57,7 @@ class ImageInformationVC: UIViewController {
         description.clipsToBounds = true
         return description
     }()
+    
     private let bDescription_ar: IQTextView = {
         let description_ar             = IQTextView()
         description_ar.textColor       =  UIColor.init(named: "BlackColor")!
@@ -64,6 +68,7 @@ class ImageInformationVC: UIViewController {
         description_ar.clipsToBounds = true
         return description_ar
     }()
+    
     private let labelPrivacy: UILabel = {
         let description             = UILabel()
         description.textColor       =  UIColor.init(named: "BlackColor")!
@@ -93,6 +98,7 @@ class ImageInformationVC: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .never
         setupViews()
     }
+    
     private func setupViews() {
         
         
@@ -206,6 +212,7 @@ class ImageInformationVC: UIViewController {
     
     @objc func saveImage(_ sender : UIButton){
         let vc = ImageCategoryVC()
+        
         vc.imagePrivacy = self.imgType
         vc.name = nameOf.text ?? ""
         vc.descreptionImg = bDescription.text ?? ""

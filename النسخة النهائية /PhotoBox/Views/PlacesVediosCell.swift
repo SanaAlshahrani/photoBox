@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SDWebImage
+
 class PlacesVediosCell: UICollectionViewCell {
     static let identifier = "PlacesVediosCell"
     
@@ -23,9 +24,6 @@ class PlacesVediosCell: UICollectionViewCell {
         return imagev
     }()
  
-    
-
-    
     private let labelV: UILabel = {
         let labelV = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 150, height: 30))
         labelV.textColor = UIColor.init(named: "BlackColor")!
