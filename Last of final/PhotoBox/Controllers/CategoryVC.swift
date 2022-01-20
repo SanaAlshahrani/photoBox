@@ -231,7 +231,7 @@ class CategoryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
                        let vc = TabBar()
                        vc.modalTransitionStyle = .crossDissolve
                        vc.modalPresentationStyle = .fullScreen
-                       self.navigationController?.present(vc, animated: true, completion: nil)
+                       self.present(vc, animated: true)
                    }else{
                        let encoder = JSONEncoder()
                        if let encoded = try? encoder.encode(self.SelectedCategories){
@@ -240,7 +240,7 @@ class CategoryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
                        let vc = TabBar()
                        vc.modalTransitionStyle = .crossDissolve
                        vc.modalPresentationStyle = .fullScreen
-                       self.navigationController?.present(vc, animated: true, completion: nil)
+                       self.present(vc, animated: true)
                    }
             }
     sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)

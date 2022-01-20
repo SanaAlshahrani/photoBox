@@ -44,10 +44,20 @@ class OnboardVC: UIViewController{
     }
     
     @objc func handleSkip() {
-        let vc = TabBar()
-        vc.modalPresentationStyle = .fullScreen
+        if UserDefaults.standard.bool(forKey: "SelectCategory") {
+            let vc = TabBar()
+            vc.modalPresentationStyle = .fullScreen
 
-        self.present(vc, animated: true)
+            self.present(vc, animated: true)
+        }else{
+          
+            let vc = CategoryVC()
+            vc.modalPresentationStyle = .fullScreen
+
+            self.present(vc, animated: true)
+            
+        }
+      
     }
     
     @objc func handleContinue(sender: UIButton) {
@@ -55,9 +65,20 @@ class OnboardVC: UIViewController{
         swiftyOnboard?.goToPage(index: index + 1, animated: true)
     }
     @objc func handleGoToApp(sender: UIButton) {
-        let vc = TabBar()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        if UserDefaults.standard.bool(forKey: "SelectCategory") {
+            let vc = TabBar()
+            vc.modalPresentationStyle = .fullScreen
+
+            self.present(vc, animated: true)
+        }else{
+          
+            let vc = CategoryVC()
+            vc.modalPresentationStyle = .fullScreen
+
+            self.present(vc, animated: true)
+            
+        }
+
     }
 }
 
